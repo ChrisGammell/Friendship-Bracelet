@@ -1,0 +1,211 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_ST_STM32F0:STM32F030F4Px U?
+U 1 1 5D87B444
+P 4325 2550
+F 0 "U?" H 4650 1800 50  0000 C CNN
+F 1 "STM32F030F4Px" V 4325 2500 50  0000 C CNN
+F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 3925 1850 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00088500.pdf" H 4325 2550 50  0001 C CNN
+	1    4325 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4825 2450 6275 2450
+$Comp
+L Device:LED D?
+U 1 1 5D87B94A
+P 7375 2375
+F 0 "D?" V 7414 2258 50  0000 R CNN
+F 1 "LED" V 7323 2258 50  0000 R CNN
+F 2 "" H 7375 2375 50  0001 C CNN
+F 3 "~" H 7375 2375 50  0001 C CNN
+	1    7375 2375
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4825 2650 6275 2650
+Wire Wire Line
+	4825 2850 6250 2850
+Wire Wire Line
+	4825 2950 6300 2950
+Wire Wire Line
+	5050 3400 6525 3400
+Wire Wire Line
+	6900 3625 8425 3625
+Wire Wire Line
+	6350 3050 6350 3025
+Text Label 5350 2450 0    50   ~ 0
+ROW1(TIM14C1)
+Text Label 5350 2650 0    50   ~ 0
+ROW2(TIM3C1)
+Text Label 5350 2850 0    50   ~ 0
+ROW4(TIM1C2)
+Text Label 5350 2950 0    50   ~ 0
+ROW5(TIM1C2)
+Text Label 5575 3400 0    50   ~ 0
+ROW6
+Text Label 7425 3625 0    50   ~ 0
+ROW7
+Text Label 5700 3900 0    50   ~ 0
+COL1
+Text Label 5700 4000 0    50   ~ 0
+COL2
+Text Label 5700 4100 0    50   ~ 0
+COL3
+Text Notes 2975 1350 0    50   ~ 0
+Reduce need for pins by using shift registers? Could use 3 pins for shift registers and then 3 row controllers.\n\nHow fast do we need to go anyway?\n\nThe downside would be that the PWM would be tough...maybe use a PWM pin to control the enable bit to fade them all at the same time?
+Text Notes 4850 3550 0    50   ~ 0
+How many PWMs do we have available?
+$Comp
+L Device:Battery_Cell BT?
+U 1 1 5D881D13
+P 1450 2600
+F 0 "BT?" H 1568 2696 50  0000 L CNN
+F 1 "Battery_Cell" H 1568 2605 50  0000 L CNN
+F 2 "" V 1450 2660 50  0001 C CNN
+F 3 "~" V 1450 2660 50  0001 C CNN
+	1    1450 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 2400 1450 2175
+$Comp
+L power:+3V0 #PWR?
+U 1 1 5D8823EA
+P 1450 1975
+F 0 "#PWR?" H 1450 1825 50  0001 C CNN
+F 1 "+3V0" H 1465 2148 50  0000 C CNN
+F 2 "" H 1450 1975 50  0001 C CNN
+F 3 "" H 1450 1975 50  0001 C CNN
+	1    1450 1975
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 2700 1450 2925
+$Comp
+L power:GND #PWR?
+U 1 1 5D88276D
+P 1450 3175
+F 0 "#PWR?" H 1450 2925 50  0001 C CNN
+F 1 "GND" H 1455 3002 50  0000 C CNN
+F 2 "" H 1450 3175 50  0001 C CNN
+F 3 "" H 1450 3175 50  0001 C CNN
+	1    1450 3175
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5D8828E3
+P 1050 2575
+F 0 "C?" H 1165 2621 50  0000 L CNN
+F 1 "1U" H 1165 2530 50  0000 L CNN
+F 2 "" H 1088 2425 50  0001 C CNN
+F 3 "~" H 1050 2575 50  0001 C CNN
+	1    1050 2575
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5D88347C
+P 675 2575
+F 0 "C?" H 790 2621 50  0000 L CNN
+F 1 "10U" H 790 2530 50  0000 L CNN
+F 2 "" H 713 2425 50  0001 C CNN
+F 3 "~" H 675 2575 50  0001 C CNN
+	1    675  2575
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1050 2425 1050 2175
+Wire Wire Line
+	1050 2175 1450 2175
+Connection ~ 1450 2175
+Wire Wire Line
+	1450 2175 1450 1975
+Wire Wire Line
+	1050 2725 1050 2925
+Wire Wire Line
+	1050 2925 1450 2925
+Connection ~ 1450 2925
+Wire Wire Line
+	1450 2925 1450 3175
+Wire Wire Line
+	1050 2925 675  2925
+Wire Wire Line
+	675  2925 675  2725
+Connection ~ 1050 2925
+Wire Wire Line
+	675  2425 675  2175
+Wire Wire Line
+	675  2175 1050 2175
+Connection ~ 1050 2175
+$Comp
+L power:+3V0 #PWR?
+U 1 1 5D884AD2
+P 4325 1700
+F 0 "#PWR?" H 4325 1550 50  0001 C CNN
+F 1 "+3V0" H 4340 1873 50  0000 C CNN
+F 2 "" H 4325 1700 50  0001 C CNN
+F 3 "" H 4325 1700 50  0001 C CNN
+	1    4325 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4325 1700 4325 1775
+Wire Wire Line
+	4325 1775 4425 1775
+Wire Wire Line
+	4425 1775 4425 1850
+Connection ~ 4325 1775
+Wire Wire Line
+	4325 1775 4325 1850
+Wire Wire Line
+	4325 3350 4325 3650
+$Comp
+L power:GND #PWR?
+U 1 1 5D886335
+P 4325 3650
+F 0 "#PWR?" H 4325 3400 50  0001 C CNN
+F 1 "GND" H 4330 3477 50  0000 C CNN
+F 2 "" H 4325 3650 50  0001 C CNN
+F 3 "" H 4325 3650 50  0001 C CNN
+	1    4325 3650
+	1    0    0    -1  
+$EndComp
+Text Label 5350 2750 0    50   ~ 0
+ROW3(TIM3C2)
+Wire Wire Line
+	4825 2750 6250 2750
+Wire Wire Line
+	5175 4100 6725 4100
+Wire Wire Line
+	5175 4000 6725 4000
+Wire Wire Line
+	5175 3900 6700 3900
+$Comp
+L 74xx:74HC595 U?
+U 1 1 5D89734D
+P 2825 4525
+F 0 "U?" H 2825 5306 50  0000 C CNN
+F 1 "74HC595" H 2825 5215 50  0000 C CNN
+F 2 "" H 2825 4525 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 2825 4525 50  0001 C CNN
+	1    2825 4525
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
