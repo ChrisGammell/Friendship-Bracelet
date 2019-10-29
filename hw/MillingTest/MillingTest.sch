@@ -1,0 +1,312 @@
+EESchema Schematic File Version 4
+LIBS:MillingTest-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:Battery BT1
+U 1 1 5D97CE78
+P 2425 3125
+F 0 "BT1" H 2533 3171 50  0000 L CNN
+F 1 "Battery" H 2533 3080 50  0000 L CNN
+F 2 "Battery:BatteryHolder_Keystone_3009_1x2450" V 2425 3185 50  0001 C CNN
+F 3 "~" V 2425 3185 50  0001 C CNN
+	1    2425 3125
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5D97E497
+P 3025 2275
+F 0 "C1" H 3140 2321 50  0000 L CNN
+F 1 "C" H 3140 2230 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 3063 2125 50  0001 C CNN
+F 3 "~" H 3025 2275 50  0001 C CNN
+	1    3025 2275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2425 1975 2425 2925
+Wire Wire Line
+	2425 4475 3025 4475
+Wire Wire Line
+	4400 4475 4400 4000
+Wire Wire Line
+	2425 3325 2425 4475
+Wire Wire Line
+	4500 2500 4500 2375
+Wire Wire Line
+	4500 2375 4400 2375
+Connection ~ 4400 2375
+Wire Wire Line
+	4400 2375 4400 1975
+Wire Wire Line
+	3025 1975 3025 2125
+Wire Wire Line
+	3025 2425 3025 4475
+Connection ~ 3025 1975
+Wire Wire Line
+	3025 1975 2425 1975
+Connection ~ 3025 4475
+$Comp
+L Device:C C2
+U 1 1 5D982699
+P 7650 3125
+F 0 "C2" H 7765 3171 50  0000 L CNN
+F 1 "C" H 7765 3080 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 7688 2975 50  0001 C CNN
+F 3 "~" H 7650 3125 50  0001 C CNN
+	1    7650 3125
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3025 1975 4400 1975
+Wire Wire Line
+	3025 4475 4400 4475
+Connection ~ 4400 1975
+Wire Wire Line
+	4400 1975 6650 1975
+Connection ~ 4400 4475
+Wire Wire Line
+	4400 4475 4900 4475
+Wire Wire Line
+	6650 3500 6650 4475
+$Comp
+L power:GND #PWR0101
+U 1 1 5D9834E1
+P 5600 4475
+F 0 "#PWR0101" H 5600 4225 50  0001 C CNN
+F 1 "GND" H 5605 4302 50  0000 C CNN
+F 2 "" H 5600 4475 50  0001 C CNN
+F 3 "" H 5600 4475 50  0001 C CNN
+	1    5600 4475
+	1    0    0    -1  
+$EndComp
+Connection ~ 5600 4475
+Wire Wire Line
+	5600 4475 5800 4475
+$Comp
+L Device:Crystal Y1
+U 1 1 5D9859DE
+P 5800 3450
+F 0 "Y1" V 5754 3581 50  0000 L CNN
+F 1 "Crystal" V 5845 3581 50  0000 L CNN
+F 2 "Crystal:Crystal_DS26_D2.0mm_L6.0mm_Horizontal_1EP_style1" H 5800 3450 50  0001 C CNN
+F 3 "~" H 5800 3450 50  0001 C CNN
+	1    5800 3450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6150 3150 5800 3150
+Wire Wire Line
+	5800 3150 5800 3300
+Wire Wire Line
+	5800 3600 5800 4475
+Connection ~ 5800 4475
+Wire Wire Line
+	5800 4475 6650 4475
+$Comp
+L Connector:Conn_ARM_JTAG_SWD_10 J1
+U 1 1 5D986ABE
+P 1825 5175
+F 0 "J1" H 1382 5221 50  0000 R CNN
+F 1 "Conn_ARM_JTAG_SWD_10" H 1382 5130 50  0000 R CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_2x05_P1.27mm_Vertical_SMD" H 1825 5175 50  0001 C CNN
+F 3 "http://infocenter.arm.com/help/topic/com.arm.doc.ddi0314h/DDI0314H_coresight_components_trm.pdf" V 1475 3925 50  0001 C CNN
+	1    1825 5175
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 5175 2325 5175
+Wire Wire Line
+	3475 5175 3475 3500
+Wire Wire Line
+	3475 3500 3900 3500
+Connection ~ 2325 5175
+Wire Wire Line
+	2325 5175 3475 5175
+Wire Wire Line
+	3900 3600 3625 3600
+Wire Wire Line
+	3625 3600 3625 5275
+Wire Wire Line
+	3625 5275 2325 5275
+Wire Wire Line
+	2325 4875 3325 4875
+Wire Wire Line
+	3325 4875 3325 2700
+Wire Wire Line
+	3325 2700 3900 2700
+Wire Wire Line
+	1825 4575 1825 1975
+Wire Wire Line
+	1825 1975 2425 1975
+Connection ~ 2425 1975
+Wire Wire Line
+	1725 5775 1825 5775
+Wire Wire Line
+	4900 5775 4900 4475
+Connection ~ 1825 5775
+Wire Wire Line
+	1825 5775 4900 5775
+Connection ~ 4900 4475
+Wire Wire Line
+	4900 4475 5600 4475
+Wire Wire Line
+	6650 1975 6650 2500
+$Comp
+L Device:C C3
+U 1 1 5D98ED34
+P 6900 2150
+F 0 "C3" H 7015 2196 50  0000 L CNN
+F 1 "C" H 7015 2105 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6938 2000 50  0001 C CNN
+F 3 "~" H 6900 2150 50  0001 C CNN
+	1    6900 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 1975 6900 1975
+Wire Wire Line
+	6900 1975 6900 2000
+Wire Wire Line
+	6900 2300 6900 2350
+Connection ~ 6650 1975
+$Comp
+L power:GND #PWR0102
+U 1 1 5D98FD3A
+P 6900 2350
+F 0 "#PWR0102" H 6900 2100 50  0001 C CNN
+F 1 "GND" H 6905 2177 50  0000 C CNN
+F 2 "" H 6900 2350 50  0001 C CNN
+F 3 "" H 6900 2350 50  0001 C CNN
+	1    6900 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 2900 7650 2900
+Wire Wire Line
+	7650 2900 7650 2975
+Wire Wire Line
+	7650 3275 7650 3450
+$Comp
+L Device:L L1
+U 1 1 5D9932A1
+P 7900 2900
+F 0 "L1" V 8090 2900 50  0000 C CNN
+F 1 "L" V 7999 2900 50  0000 C CNN
+F 2 "Inductor_SMD:L_0402_1005Metric" H 7900 2900 50  0001 C CNN
+F 3 "~" H 7900 2900 50  0001 C CNN
+	1    7900 2900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C4
+U 1 1 5D993A43
+P 8175 3150
+F 0 "C4" H 8290 3196 50  0000 L CNN
+F 1 "C" H 8290 3105 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 8213 3000 50  0001 C CNN
+F 3 "~" H 8175 3150 50  0001 C CNN
+	1    8175 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7650 2900 7750 2900
+Wire Wire Line
+	8175 2900 8175 3000
+Wire Wire Line
+	8175 3450 7925 3450
+Wire Wire Line
+	8050 2900 8175 2900
+Wire Wire Line
+	8175 3300 8175 3450
+Connection ~ 7650 2900
+$Comp
+L power:GND #PWR0103
+U 1 1 5D994B54
+P 7925 3525
+F 0 "#PWR0103" H 7925 3275 50  0001 C CNN
+F 1 "GND" H 7930 3352 50  0000 C CNN
+F 2 "" H 7925 3525 50  0001 C CNN
+F 3 "" H 7925 3525 50  0001 C CNN
+	1    7925 3525
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7925 3525 7925 3450
+Connection ~ 7925 3450
+Wire Wire Line
+	7925 3450 7650 3450
+Wire Wire Line
+	8175 2900 8700 2900
+Wire Wire Line
+	8700 2900 8700 2700
+Wire Wire Line
+	8700 2700 8675 2700
+Connection ~ 8175 2900
+$Comp
+L Device:Antenna AE1
+U 1 1 5D996A9B
+P 8675 2500
+F 0 "AE1" H 8755 2489 50  0000 L CNN
+F 1 "Antenna" H 8755 2398 50  0000 L CNN
+F 2 "" H 8675 2500 50  0001 C CNN
+F 3 "~" H 8675 2500 50  0001 C CNN
+	1    8675 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 2500 4400 2375
+$Comp
+L MCU_ST_STM32F0:STM32F030F4Px U2
+U 1 1 5D97C465
+P 4400 3200
+F 0 "U2" H 4400 2311 50  0000 C CNN
+F 1 "STM32F030F4Px" H 4400 2220 50  0000 C CNN
+F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 4000 2500 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00088500.pdf" H 4400 3200 50  0001 C CNN
+	1    4400 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L MT:CMT2110A U1
+U 1 1 5D9813E1
+P 6650 3000
+F 0 "U1" H 6875 2650 50  0000 L CNN
+F 1 "CMT2110A" H 6700 2525 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6" H 6650 3000 50  0001 C CNN
+F 3 "" H 6650 3000 50  0001 C CNN
+	1    6650 3000
+	1    0    0    -1  
+$EndComp
+Text Label 5075 3800 2    50   ~ 0
+CLK
+Wire Wire Line
+	5075 3800 4900 3800
+Wire Wire Line
+	4900 2875 4900 2900
+Wire Wire Line
+	4900 2875 5125 2875
+Text Label 5125 2875 2    50   ~ 0
+DATA
+Text Label 5900 2700 0    50   ~ 0
+DATA
+Wire Wire Line
+	5900 2700 6150 2700
+Wire Wire Line
+	6150 2800 5900 2800
+Text Label 5900 2800 0    50   ~ 0
+CLK
+$EndSCHEMATC
