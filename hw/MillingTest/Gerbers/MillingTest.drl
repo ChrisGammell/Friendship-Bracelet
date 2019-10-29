@@ -1,20 +1,21 @@
 M48
-; DRILL file {KiCad (5.1.2)-2} date 10/10/2019 12:04:04 AM
-; FORMAT={-:-/ absolute / metric / decimal}
-; #@! TF.CreationDate,2019-10-10T00:04:04-05:00
-; #@! TF.GenerationSoftware,Kicad,Pcbnew,(5.1.2)-2
+; DRILL file {KiCad 5.1.4-e60b266~84~ubuntu19.04.1} date Tue 29 Oct 2019 11:07:26 AM CDT
+; FORMAT={-:-/ absolute / inch / decimal}
+; #@! TF.CreationDate,2019-10-29T11:07:26-05:00
+; #@! TF.GenerationSoftware,Kicad,Pcbnew,5.1.4-e60b266~84~ubuntu19.04.1
 FMAT,2
-METRIC
-T1C0.500
-T2C1.900
+INCH
+T1C0.0394
+T2C0.0433
 %
 G90
 G05
 T1
-X174.67Y-66.28
-X174.67Y-68.18
+X7.6654Y-2.5512
 T2
-X168.12Y-94.03
-X193.52Y-94.03
+X6.7165Y-2.5394
+X6.7165Y-2.7165
+X6.9724Y-2.5394
+X6.9724Y-2.7165
 T0
 M30

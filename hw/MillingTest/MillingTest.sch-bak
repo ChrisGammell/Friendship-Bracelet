@@ -101,7 +101,7 @@ P 8225 3450
 F 0 "Y1" V 8179 3581 50  0000 L CNN
 F 1 "Crystal" V 8270 3581 50  0000 L CNN
 F 2 "Crystal:Crystal_SMD_2520-4Pin_2.5x2.0mm" H 8225 3450 50  0001 C CNN
-F 3 "https://www.digikey.com/product-detail/en/diodes-incorporated/FH2600027Z/FH2600027ZDIDKR-ND/9952965" H 8225 3450 50  0001 C CNN
+F 3 "~" H 8225 3450 50  0001 C CNN
 	1    8225 3450
 	0    1    1    0   
 $EndComp
